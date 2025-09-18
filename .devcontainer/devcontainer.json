@@ -1,0 +1,20 @@
+{
+  "name": "Haskell + Scotty Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",  
+  "features": {
+    "ghcup": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "ghcup install ghc latest && ghcup install hls && ghcup set ghc latest && cabal update",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "haskell.haskell",
+    "ms-vscode.cpptools",   // depende do que mais usar
+    "GitHub.vscode-pull-request-github"
+  ]
+}
